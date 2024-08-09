@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./styles/index.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Festivite</title>
+
+    <link rel="stylesheet" href="/styles/index.css" />
+  </head>
+
+  <body>
+    <div id="main-layout">
+      <aside id="brand-content">
+        <div class="linear-gradient">
+          <img
+            src="./assets/background.jpg"
+            alt="imagem de um pedaço de bolo de aniversário"
+          />
+        </div>
+
+        <div id="inner-content">
+          <div id="logo">
+            <img
+              src="./assets/logo.svg"
+              alt="logotipo - uma ilustração de lança-confetes"
+            />
+            <div id="logo-text">Festivite</div>
+          </div>
+          <p>Crie um convite digital para o seu evento</p>
+        </div>
+      </aside>
+
+      <main id="form-content">
+        <div class="container">
+          <h1>Crie seu convite</h1>
+
+          <form action="">
+            <fieldset id="about-event">
+              <legend>
+                <img src="./assets/icons/calendar.svg" alt="ícone de calendário" />
+                Sobre o evento
+              </legend>
+
+              <div class="input-wrapper">
+                <label for="event-title">Título</label>
+                <input
+                  name="event-title"
+                  type="text"
+                  id="event-title"
+                  placeholder="Nome do evento"
+                />
+              </div>
+
+              <div class="flex gap-16">
+                <div class="input-wrapper flex-1">
+                  <label for="event-start">Início</label>
+                  <input name="event-start" type="datetime-local" id="event-start" />
+                </div>
+                <div class="input-wrapper flex-1">
+                  <label for="event-end">Fim</label>
+                  <input name="event-end" type="datetime-local" id="event-end" />
+                </div>
+              </div>
+
+              <div class="flex gap-16">
+                <div class="input-wrapper flex-1">
+                  <label for="event-type">Tipo</label>
+                  <div class="segmented-control radio-wrapper">
+                    <div class="radio-inner">
+                      <img src="./assets/icons/building.svg" alt="ícone de prédio" />
+                      <label for="football">Presencial</label>
+                      <input name="event-type" type="radio" id="event-type" checked />
+                    </div>
+                    <div class="radio-inner">
+                      <img src="./assets/icons/video.svg" alt="ícone de vídeo" />
+                      <label for="football">Online</label>
+                      <input name="event-type" type="radio" id="event-type" />
+                    </div>
+                  </div>
+                </div>
+                <div class="input-wrapper flex-1">
+                  <label for="event-local">Local</label>
+                  <input
+                    name="event-local"
+                    type="text"
+                    id="event-local"
+                    placeholder="Link ou endereço"
+                  />
+                </div>
+              </div>
+
+              <div class="textarea-wrapper">
+                <label for="event-description">Descrição</label>
+                <textarea
+                  name="event-description"
+                  id="event-description"
+                  rows="5"
+                  placeholder="Escreva sobre os detalhes do evento"
+                ></textarea>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+div#main-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1.25rem;
+  justify-content: center;
+
+  height: 100vh;
+  max-width: 80rem;
+  margin-inline: auto;
+
+  overflow: hidden; /* para nunca ter barra de rolagem */
+}

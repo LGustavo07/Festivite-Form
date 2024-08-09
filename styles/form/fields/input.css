@@ -1,0 +1,51 @@
+label {
+  font: var(--text-body-sm);
+  color: var(--text-body);
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+input,
+textarea,
+select {
+  height: 3rem;
+  width: 100%;
+  padding: 0.8125rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  outline: 1px solid var(--input-stroke);
+  background-color: var(--input-base);
+  color: var(--text-heading);
+  font: var(--text-body-md);
+
+  &:hover,
+  &:focus {
+    outline: 1px solid var(--brand-light);
+    outline-offset: 0.1px; /* para aparecer a borda no Safari */
+  }
+
+  &::placeholder {
+    color: var(--input-placeholder);
+  }
+}
+
+textarea {
+  height: 136px;
+}
+
+input[type="datetime-local"] {
+  color-scheme: dark;
+  &::-webkit-calendar-picker-indicator {
+    /* filter: invert(1); */
+    /* color-scheme: dark; */
+    opacity: 0.8;
+  }
+}
+
+.input-wrapper {
+  margin-bottom: 1rem;
+}
+
+/* #event-description {
+  caret-color: transparent;
+} */
