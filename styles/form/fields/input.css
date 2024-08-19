@@ -1,36 +1,43 @@
 label {
   font: var(--text-body-sm);
-  color: var(--text-body);
-  margin-bottom: 0.75rem;
+  color: var(--color-text-body);
+  margin-bottom: 12px;
   display: block;
+}
+
+input {
+  height: 48px;
 }
 
 input,
 textarea,
 select {
-  height: 3rem;
   width: 100%;
-  padding: 0.8125rem 1rem;
-  border-radius: 0.5rem;
+  padding: 13px 16px;
+  border-radius: 8px;
   border: none;
-  outline: 1px solid var(--input-stroke);
-  background-color: var(--input-base);
-  color: var(--text-heading);
+  outline: 1px solid var(--color-input-stroke);
+  background-color: var(--color-input-base);
+  color: var(--color-text-heading);
   font: var(--text-body-md);
 
   &:hover,
   &:focus {
-    outline: 1px solid var(--brand-light);
+    outline: 1px solid var(--color-brand-light);
     outline-offset: 0.1px; /* para aparecer a borda no Safari */
   }
 
   &::placeholder {
-    color: var(--input-placeholder);
+    color: var(--color-input-placeholder);
   }
-}
 
-textarea {
-  height: 136px;
+  &:invalid {
+    outline: 1px solid var(--color-feedback-danger);
+  }
+
+  &:valid + .error {
+    display: none;
+  }
 }
 
 input[type="datetime-local"] {
@@ -43,9 +50,54 @@ input[type="datetime-local"] {
 }
 
 .input-wrapper {
-  margin-bottom: 1rem;
+  margin-bottom: 16px;
 }
 
-/* #event-description {
-  caret-color: transparent;
-} */
+#cover-photo {
+  .input-wrapper {
+    all: unset;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    label#choose-file-button {
+      gap: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      top: 6px;
+      position: relative;
+      width: 119px;
+      height: 40px;
+      background-color: var(--color-shape-button);
+      border-radius: 8px;
+      font: var(--text-body-sm-semibold);
+      color: var(--color-text-heading);
+      padding-block: 4px;
+      &:hover {
+        background-color: var(--color-shape-hover);
+      }
+      input[type="file"] {
+        width: 119px;
+        height: 40px;
+        opacity: 0;
+        position: absolute;
+      }
+    }
+    #file-name {
+      color: var(--color-input-placeholder);
+      font: var(--text-body-md);
+      max-width: 234px;
+    }
+  }
+}
+
+.error {
+  font: var(--text-body-xs);
+  color: var(--color-feedback-danger);
+  padding-top: 8px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}

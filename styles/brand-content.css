@@ -1,12 +1,12 @@
 aside#brand-content {
   /* background: top / contain no-repeat url(../assets/background.jpg); */
-  margin: 1.25rem 0 0 1.25rem;
+  margin: 20px 0 0 20px;
   position: relative;
 
   .linear-gradient {
     position: relative;
     &::after {
-      border-radius: 0.75rem;
+      border-radius: 12px;
       content: "";
       position: absolute;
       inset: 0;
@@ -20,29 +20,29 @@ aside#brand-content {
     }
   }
   img {
-    border-radius: 0.75rem;
+    border-radius: 12px;
   }
   & div#inner-content {
     position: absolute;
-    top: 2rem;
-    left: 2rem;
+    top: 32px;
+    left: 32px;
 
     & div#logo {
       img {
-        height: 3rem;
-        width: 2.8rem;
+        height: 48px;
+        width: 45.85px;
       }
 
       div#logo-text {
         padding-block: 16px 4px;
         font: var(--text-logo);
-        color: var(--accent-pink);
+        color: var(--color-accent-pink);
       }
     }
 
     p {
       font: var(--text-body-md-light);
-      color: var(--text-heading);
+      color: var(--color-text-heading);
     }
   }
 }
